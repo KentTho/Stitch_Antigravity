@@ -222,6 +222,8 @@ Với tư duy _"Ngôn ngữ là công cụ — quan trọng là làm chủ luồ
 | Slide giới thiệu         | Slide trình bày tổng quan        | [Stitch + Antigravity Overview](https://canva.link/1i8eungsswz9ywy)                                                                                                                                                                               |
 | Prompt mẫu               | Tập hợp câu lệnh hay dùng nhất   | [Landing Page](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.jfiyq9e0q71z) · [Full Website](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.wbmwv7njrlvg) |
 | Stitch Skill (GitHub)    | File kỹ năng cài vào Antigravity | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)                                                                                                                                                               |
+| Google Drive    | Tổng hợp tài liệu + Video | [google-drive-bbo-tech](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                                                                                                                                               |
+| Documents    | Tài liệu đọc | [documents-Stitch-Antigravity](https://docs.google.com/document/d/1h0s_9ip79DWxWq8VgCq2zRJTmr0tOQR4/edit?usp=sharing&ouid=101529481334145985368&rtpof=true&sd=true)                                                                                                                                                               |
 
 ---
 
