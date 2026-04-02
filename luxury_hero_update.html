@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cafephile | The Curated Alchemist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(24px); }
+        .tonal-transition { background: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to)); }
+        .ambient-shadow { box-shadow: 0 40px 60px -15px rgba(39, 22, 12, 0.08); }
+        .no-border { border: none !important; }
+        /* Perspective for 3D effects */
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-y-12 { transform: rotateY(12deg); }
+    
+        .gold-gradient-text {
+            background: linear-gradient(to right, #C79A2E, #F9F3E6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        .btn-glow-hover:hover {
+            box-shadow: 0 0 20px 5px rgba(253, 203, 91, 0.4);
+            transition: all 0.4s ease;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(121, 89, 0, 0.4); }
+            15% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(121, 89, 0, 0); }
+            30% { transform: scale(1); box-shadow: 0 0 0 0 rgba(121, 89, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(121, 89, 0, 0); }
+        }
+        .btn-heartbeat {
+            animation: heartbeat 2s infinite ease-in-out;
+            transition: all 0.4s ease;
+        }
+        .btn-heartbeat:hover {
+            animation: none;
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #27160c, #795900); /* Gradient mixing primary and secondary */
+            box-shadow: 0 10px 25px -5px rgba(121, 89, 0, 0.5); /* Ambient shadow matching brand */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed": "#29170d",
+                "error-container": "#ffdad6",
+                "tertiary-fixed": "#d1e7e7",
+                "primary-container": "#3e2a1f",
+                "tertiary": "#091d1e",
+                "surface-dim": "#dfdacd",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#374a4b",
+                "on-secondary-container": "#735500",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#261a00",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#fff9ec",
+                "surface-container-high": "#ede8db",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f9f3e6",
+                "surface": "#fff9ec",
+                "surface-container": "#f3ede0",
+                "surface-variant": "#e8e2d5",
+                "inverse-on-surface": "#f6f0e3",
+                "outline": "#81756f",
+                "inverse-primary": "#e0c0b0",
+                "secondary-fixed": "#ffdf9f",
+                "error": "#ba1a1a",
+                "surface-tint": "#72594c",
+                "on-tertiary-container": "#869a9b",
+                "on-secondary-fixed-variant": "#5c4300",
+                "primary-fixed": "#fedccb",
+                "primary": "#27160c",
+                "primary-fixed-dim": "#e0c0b0",
+                "on-tertiary-fixed": "#0b1f20",
+                "secondary-container": "#fdcb5b",
+                "on-surface-variant": "#4f4540",
+                "on-background": "#1d1c14",
+                "background": "#fff9ec",
+                "inverse-surface": "#333028",
+                "on-surface": "#1d1c14",
+                "on-error": "#ffffff",
+                "secondary": "#795900",
+                "surface-container-highest": "#e8e2d5",
+                "on-primary-fixed-variant": "#584236",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#b5cbcb",
+                "on-primary-container": "#ad9081",
+                "outline-variant": "#d3c3bd",
+                "secondary-fixed-dim": "#f1bf51",
+                "tertiary-container": "#1f3233"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-100/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none no-border">
+<div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="font-serif text-2xl italic font-bold text-stone-900 dark:text-stone-50">
+                Cafephile
+            </div>
+<div class="hidden md:flex gap-10">
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-amber-700 dark:text-amber-500 border-b-2 border-amber-600 dark:border-amber-400 pb-1" href="#">Home</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">About</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Menu</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Heritage</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Blog</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary px-6 py-2.5 rounded text-on-primary font-medium tracking-wide uppercase text-xs active:scale-95 btn-heartbeat">
+                Order Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center bg-primary overflow-hidden">
+<!-- Background Imagery -->
+<div class="absolute inset-0 opacity-40 parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSEw4EfdHFOwGyOEKbqJ0TBvGU9aQChjMiHE8Ff-Wz1iP5MMmo8PW2XvWiy9iHM2xDGiM_q1HdF92dR35ww_P9uvr8lEPiMMavcxaAbYnzJXCokyq8TcRmoGmtAVgark0WFcgGv7Ol__WCHL7AY6apSYAsySzOZOgbe4zqCC-IqaE7geH3zVCbyZbPQ8gMGfDkg-l4qvq4TwverQKQqdE-G8ovqWMFaJLTSpqL1QYHA5lLFhdKipRvuYY-z2BQCjhlggQBri8I_iI'); filter: grayscale(100%);"></div>
+<!-- Decorative Coffee Beans (3D depth simulation) -->
+<div class="absolute top-20 right-[15%] w-32 h-32 opacity-80 blur-sm">
+<img class="w-full h-full object-contain rotate-12" data-alt="macro close-up of a single roasted coffee bean floating in space against a dark background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzquU2EvOlsFeTe5uZlqL5HGZLCH_HAO5WoiyiUB8dqrco_3M_e4N1peXRT2KqL-9mI3XXYhbJQgDN9-rxpCjNI69Gqr2xWb1lYECFeL9OqZN4La-QK62J3QjJJVSgMBo3Am4r755TTWqmMah_t0aWN5UT0ibHBJL_t-YRPdeKaKc-LOwSKfU_bmF-K9eL3CjMvUZOTyeQ8R_ZoTQUzx0AnqLEZW2jMC_VGIXGI6ptAsDA7j0aScr8x92xK79Evwj0v-y0ukju5C0"/>
+</div>
+<div class="absolute bottom-20 left-[10%] w-24 h-24 opacity-60">
+<img class="w-full h-full object-contain -rotate-45" data-alt="scattered dark roasted coffee beans falling through the air with elegant motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi78gK0v4bqDN2jUS_Ztkn08PYyeSpytZruDxVUNSgRiC9JPZpp3J4E0QvxhM_KR5tqx0WSI51U1tqOEFefmq6sLfBO93xuPX-_Y2ePmwhS7Uk6eBoOOX4wHCAlmiRWDALLzppYjF6-4z6saVGzebDFPyvhr3zTHUhuco-Gzdz6yKkncgYW5Mv-68EURmgBzbz6Yc7FbcBReqkZVtOMp6F6PclxjZv5P2ZB73MLvJcz0gEZQDE1ydL9pxAGFgJ6CPt_cuXWGPLXPs"/>
+</div>
+<div class="relative max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="text-surface">
+<span class="inline-block px-4 py-1 mb-6 border border-on-primary-container/30 rounded-full text-xs font-semibold tracking-widest uppercase text-on-primary-container">The Curated Alchemist</span>
+<h1 class="font-headline text-7xl leading-[1.1] mb-8 tracking-tight">Life Begins After <span class="gold-gradient-text italic">Coffee</span></h1>
+<p class="font-body text-xl text-on-primary-container max-w-lg mb-10 leading-relaxed">
+                    Experience the ritual of specialty brewing. Every bean is a story of origin, every cup a masterpiece of extraction.
+                </p>
+<div class="flex gap-6">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-lg font-bold text-sm tracking-widest uppercase hover:scale-105 transition-transform duration-300 btn-glow-hover">
+                        Explore Our Menu
+                    </button>
+<button class="border border-on-primary-container/50 text-on-primary-container px-10 py-5 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-on-primary-container/10 transition-colors">
+                        Our Story
+                    </button>
+</div>
+</div>
+<div class="hidden md:flex justify-end perspective-1000">
+<div class="relative group rotate-y-12 transition-transform duration-700 hover:rotate-y-0">
+<div class="absolute inset-0 bg-secondary-container/20 blur-3xl rounded-full"></div>
+<img class="relative w-[500px] h-[650px] object-cover rounded-2xl shadow-2xl grayscale transition-all duration-700 group-hover:grayscale-0" data-alt="luxury ceramic coffee cup being filled with a precise pour-over stream in a dramatic spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHt6qdtoLYbD6fsgwd00pJYdZWqapPvURqXPGCGAWKEmb1njzNObE41OTy_uuyGmgdY-KsoeIjJsqtJpxIKHy-vnW1Bi8DYKINhZ3isJBGJr228ZiSvtQ95vnPqG3ysoBzWLP25TOzWZXBr-0fB4BkVDOKSAfbFo54xuYnFLf0o4uGhVdfW6yUIqTBoa4oZWHQsa63qv1FCC59YMZEonsMXxG8ph1g-K2KbVWoWfNuOV2kdmLjgQIcfB8PA1olA0Gtfcaq_JxMyU0"/>
+<!-- Heritage Badge -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary flex flex-col items-center justify-center rounded-full text-on-secondary shadow-xl z-20 transform hover:scale-110 transition-transform">
+<span class="font-headline text-3xl font-bold">25+</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Years of Mastery</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- The Craft of Curation Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-12">
+<div class="text-center mb-24">
+<h2 class="font-headline text-5xl mb-4">The Craft of Curation</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group p-10 bg-surface-container-low rounded-xl ambient-shadow transition-all duration-500 hover:-translate-y-4 hover:bg-surface-container-lowest">
+<div class="mb-8 text-secondary">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">heat</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Masterful Aroma</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Precision roasting techniques that unlock volatile aromatic compounds, creating a scent that defines your morning.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="group p-10 bg-surface-container-low rounded-xl ambient-shadow transition-all duration-500 hover:-translate-y-4 hover:bg-surface-container-lowest">
+<div class="mb-8 text-secondary">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">
+                            grass
+                        </span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Curated Varieties</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Ethically sourced single-origin beans from the world's most prestigious high-altitude volcanic estates.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="group p-10 bg-surface-container-low rounded-xl ambient-shadow transition-all duration-500 hover:-translate-y-4 hover:bg-surface-container-lowest">
+<div class="mb-8 text-secondary">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">
+                            award_star
+                        </span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Exceptional Grades</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Only the top 1% of the world's harvest makes it into our roastery. Each batch is QC tested by master cuppers.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialty Selections Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="text-secondary font-bold tracking-widest uppercase text-xs mb-4 block">Limited Batch</span>
+<h2 class="font-headline text-5xl">Specialty Selections</h2>
+</div>
+<button class="text-secondary font-bold tracking-widest uppercase text-sm border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-all">
+                    View Entire Collection
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product 1 -->
+<div class="bg-surface p-4 rounded-full group relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="classic americano in a minimalist white ceramic cup with a delicate layer of crema and steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLTvmv5SzLSWFkpQqPuxHwdhTPUBSwHnAxHdD1hve7KLiY4UfTFUEUkXzm35QVd8tSqCpIEuXkHqobQAbStD-vpHYJ73GbBvWohmDiiikYGWZbMSCuB4PZ4uF4N91ncVBkZKjPW4gHGbe4SIecCcdD5yjkZVJOROlb5d4K44D1fVG1N40U-LmUqPPZj1HcWAGHZTNqexetPHp2d95deinNKQ63BY61CfSu8Gz3jBwg6-Gma9o7Yqoxa-2Sn6WzdXAkxlWMesBRAww"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<h4 class="font-headline text-2xl mb-2">Americano</h4>
+<p class="text-sm text-on-surface-variant mb-4 font-medium uppercase tracking-tighter">Ethiopian Yirgacheffe Base</p>
+<div class="font-headline text-2xl text-secondary font-bold">$6.50</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface p-4 rounded-full group relative overflow-hidden transition-all duration-500 hover:shadow-2xl translate-y-12">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="V60 pour over setup with clear coffee liquid dripping into a glass carafe highlighting clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNOR3ma-2ceSqruK69CYkx-DwZ_meN5enz97IJXKnodR6rxocWKsiCrFXkHSYBjK1-fLPim2izbRNILGLQpEcojpsIJOhYDruDVhyMZRw-URSuUMrWfz92OKtWwKRCOLGz6qNA3imZTfjTM8fwpLqYvHkklhbaJSK7A2YEC3ady2KfAiRlkbJA3e6SICXCOinPQn1cKLUYOt0Z9nqqs3MoJV6y_0iCnrShSNFaRp4ynsYHkdgr9tAa3NoflwD_aLQifZ61IqRgAjQ"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<h4 class="font-headline text-2xl mb-2">Single Origin</h4>
+<p class="text-sm text-on-surface-variant mb-4 font-medium uppercase tracking-tighter">Slow-Drip Pour Over</p>
+<div class="font-headline text-2xl text-secondary font-bold">$12.00</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface p-4 rounded-full group relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="caramel macchiato with layered milk and espresso topped with a golden caramel drizzle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe-M8CFyh1pp2CZcHxpkAR_r17dLBuX3GokiBBamBr00YPP61wfISHtdtjZhgJZ-xE3Yq_zKLOwrhVCtoLRG0A17wvIhnmGRqUgJ-OLwJ72WUOhZphh2goFUIrcXfyWHJLLjtNtQS7UensDVCM9i5tAhhpZNRchlCtisYx-y56bpN7SXZRwSqKsTST8QvHh_Qj1qZVd0yBH87KpIIrhjhRleFmHWRvIe5I03qF0OcuEGSXge_AbUFxxz14NYxx9m7pwXmaki6eIJc"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<h4 class="font-headline text-2xl mb-2">Caramel Macchiato</h4>
+<p class="text-sm text-on-surface-variant mb-4 font-medium uppercase tracking-tighter">House-made Salted Caramel</p>
+<div class="font-headline text-2xl text-secondary font-bold">$8.75</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage Section -->
+<section class="relative py-48 bg-primary">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="vintage coffee roasting machine with glowing heating elements and dark metallic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_kFgDsGDTCWBON7fVVKyFifky9ZBumqAMvfiiCzsxDF1TeCsf3c9Xxl9a4nt8ibl3VgqJnhsge-JXBoIKyZFW_gjKYMkWItO5TpKqz7L_KSxIlU-qOZrALu4JSg92M5A6l43klAsUWMD6W17AJjBcgllZjNTJkYO41kepmYUvgDxPleDb1SVEMHEhkVOWNNAJfzp5ZG55R9Maj1xitQnNartvBYOLprbRGlXBarCwoRV0eppeV0BKjZqcWr5KCgxoOyi0r8Qj2-o"/>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-12 text-center">
+<span class="text-secondary-container font-bold tracking-[0.3em] uppercase text-xs mb-8 block">Our Legacy</span>
+<h2 class="font-headline text-6xl text-surface mb-12 leading-tight">Quarter Century of Perfecting the Pour</h2>
+<p class="font-body text-xl text-on-primary-container leading-relaxed mb-16">
+                Founded in 1999, Cafephile was born from a singular obsession: to find the alchemical balance between heat and bean. Today, we continue that journey, roasting in small batches to ensure that every cup honors the farmers who grew it.
+            </p>
+<div class="flex flex-wrap justify-center gap-12 text-surface">
+<div class="text-center">
+<div class="font-headline text-5xl text-secondary-container mb-2">25+</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Years Active</div>
+</div>
+<div class="text-center">
+<div class="font-headline text-5xl text-secondary-container mb-2">12k</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Farmers Supported</div>
+</div>
+<div class="text-center">
+<div class="font-headline text-5xl text-secondary-container mb-2">150+</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Awards Won</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-12">
+<div class="text-center mb-24">
+<h2 class="font-headline text-5xl mb-4">Voices of the Ritual</h2>
+<p class="text-on-surface-variant">The curators of taste share their experiences</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container p-12 rounded-2xl ambient-shadow relative">
+<span class="material-symbols-outlined text-secondary-container absolute top-8 right-8 text-5xl opacity-50">format_quote</span>
+<p class="italic text-lg mb-8 text-primary font-serif leading-relaxed">
+                        "The depth of flavor in their single-origin roast is unparalleled. It's not just coffee; it's a sensory experience that lingers."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-300 overflow-hidden">
+<img data-alt="portrait of a professional food critic with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKFWNmAQNYQrD8m7klZAhomAtZex9XhPzg2gr-LqCBdUIria9dkQ-QtHkmlsjfCOpZ_5mpV95AMBRoADGFmXOatN4tgcPu9RqQDdQr7Ra-mNp1PF_gflqBGCcNxaU1whSby5ggrn_Rgvi0MmMzpNaxKhI0CYv1lCeUDvz4ZGaPRAvQHuMijP1nTOGjBvrzdOoQsGiZJ9nbBeDYsNthJ6EL3aAgJyWm4R1eKHD9skS32uSMcoQWQCOSf2_Sh_IYOMaSczDJp07xXUg"/>
+</div>
+<div>
+<div class="font-bold text-primary">Julian Thorne</div>
+<div class="text-xs text-secondary font-bold uppercase tracking-widest">Gourmet Journal</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-primary p-12 rounded-2xl shadow-2xl relative lg:-translate-y-8">
+<span class="material-symbols-outlined text-secondary-container absolute top-8 right-8 text-5xl opacity-50">format_quote</span>
+<p class="italic text-lg mb-8 text-surface font-serif leading-relaxed">
+                        "Cafephile has mastered the alchemy of brewing. Their attention to detail, from bean sourcing to the final pour, is inspiring."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-300 overflow-hidden">
+<img data-alt="portrait of a lifestyle influencer in a luxury setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDG2VDVo-Hfhapf8xViPYtjNuyTw8mgpxh1l9YtICHPTQSsPuuC1Girbzr8RRtswOpSdyAhG3WNxhtfBdN-dCwjfieSDJqfUM5quKN84NGZzBe7t8PZST3wI6rDdzUb-crupIuekje_aaVvhRpBsNfIvTYD_WOmi-XIcbDH-bSokX9hDoeeE7Aycm3l4zC96_xk-3uH3txgx1Ew5Tf-R8-wr6bKMtPHVr0xzzf3in_refSkAcpgHRoq8lJFvIyzgvL5pszjMTfcUw"/>
+</div>
+<div>
+<div class="font-bold text-surface">Marcus Sterling</div>
+<div class="text-xs text-secondary-container font-bold uppercase tracking-widest">Coffee Enthusiast</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container p-12 rounded-2xl ambient-shadow relative">
+<span class="material-symbols-outlined text-secondary-container absolute top-8 right-8 text-5xl opacity-50">format_quote</span>
+<p class="italic text-lg mb-8 text-primary font-serif leading-relaxed">
+                        "Their space is as intentional as their brew. Every visit feels like stepping into a dedicated sanctuary for specialty coffee."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-300 overflow-hidden">
+<img data-alt="portrait of a creative professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOlAe9U6wBTOTUv04lUr0grfY9VO9KEHzXiFJkhOFeRMbTZdIwHg6IPGFtsbFIYnFq_grqF-VGoS_5bSqBB0KABYnk70ziCybVpJSgrvvVS6TsiG3KdPj0P6-oRuGZd50um5udViLgDNUQLO8h7Z-8s4O2_bBBGzXYuEVzFMx4bfgpOSxqG39aN5mVkDL4C5BBtTGVYA-ywU30bT6BjlSIIJONDlCw2W0MVBmW0zBWyF6GOMPCwoDI4xf6KvIcTP_TqZOxA-Rsgjc"/>
+</div>
+<div>
+<div class="font-bold text-primary">Elara Vance</div>
+<div class="text-xs text-secondary font-bold uppercase tracking-widest">Design Director</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest News & Blog Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-12">
+<h2 class="font-headline text-5xl mb-20">The Alchemist’s Journal</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<article class="group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden rounded-xl mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="misty mountain coffee plantation with rows of lush green coffee plants under a soft morning fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbM6D3YPMWDMkk4b2H6W8MByPZyim8K3IqrNDrkh-JZsfD2LggaUBMIKBmypcF8zLIl3wjigVubfQucBXccmSQNYntQCcS121By6luXFzrgk_qkb4tFcfa5n0HxAeKOAByvYHwc4twE061UXc3hfx2kdia-DLLXR8OWSAFEAymxT5Wks_IMswRl8n0wmqEfTnmZEzuIOAOPRYswUIMYGpSKkQYHzQrri_R94J-o06ZKOnEh1BGq4rTjkcfU3YJk-GO6iPB_Ci1KK0"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<span class="text-secondary font-bold uppercase tracking-widest text-xs">Origin Stories</span>
+<h3 class="font-headline text-3xl mt-4 mb-4 group-hover:text-secondary transition-colors">The High Altitudes of Sidama</h3>
+<p class="text-on-surface-variant leading-relaxed">Exploring the unique terroir that gives our latest Ethiopian batch its signature floral notes...</p>
+</article>
+<article class="group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden rounded-xl mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="aesthetic overhead shot of coffee brewing equipment including a scale, timer, and beans on a marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdw0VupqJCC61-uPwr289EhEwOhC6tfOt6wYPkdIZDH82XWmLQO-jdZILPW3MXOv8eKH7SxCaw59gKwL5WSjtTC3CFM_SuRY0xP0qa1KTqALsPBC4yk-gpcOYaFXwOxQTIrxlpVu1G-ObfDoXCGfHJoxz7Sz9eNVuNVr2ouFIdG8ojV7A9slwl2QeTu_ZCdOw9C2g25jzCYFidQnzFhH-Co9iRE2P5WJTX-C3n2PCFLizp6VeEVSvrvOVJ4_HmN8jVKgkREvn2jy8"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<span class="text-secondary font-bold uppercase tracking-widest text-xs">Masterclass</span>
+<h3 class="font-headline text-3xl mt-4 mb-4 group-hover:text-secondary transition-colors">Precision Pouring Techniques</h3>
+<p class="text-on-surface-variant leading-relaxed">Why the speed and temperature of your water pour might be ruining your morning brew...</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Build Your Fresh Mind (CTA) Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-5xl mx-auto px-12">
+<div class="bg-primary-container rounded-[2rem] p-16 text-center relative overflow-hidden">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div>
+<h2 class="font-headline text-5xl text-surface mb-6 relative z-10">Build Your Fresh Mind</h2>
+<p class="text-on-primary-container mb-12 max-w-xl mx-auto relative z-10">
+                    Subscribe to our curated newsletter for seasonal launches, brewing masterclasses, and exclusive access to limited estate releases.
+                </p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10" onsubmit="event.preventDefault()">
+<input class="flex-1 bg-primary text-surface px-8 py-5 rounded-xl border border-on-primary-container/20 focus:ring-1 focus:ring-secondary-container outline-none placeholder:text-on-primary-container/40" placeholder="Your refined email address" type="email"/>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-xl font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-opacity">
+                        Join
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer / Contact -->
+<footer class="bg-stone-900 dark:bg-stone-950 w-full rounded-t-3xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-serif text-3xl font-bold text-stone-50 mb-6">Cafephile</div>
+<p class="text-stone-400 text-sm leading-relaxed mb-8">
+                    Crafting the alchemical balance of specialty coffee since 1999.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-serif text-xl text-amber-500 mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-stone-100 text-sm hover:translate-x-1 transition-transform inline-block" href="#">Curated Menu</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 text-sm hover:translate-x-1 transition-transform inline-block" href="#">Brewing Guide</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 text-sm hover:translate-x-1 transition-transform inline-block" href="#">Wholesale</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 text-sm hover:translate-x-1 transition-transform inline-block" href="#">The Roastery</a></li>
+</ul>
+</div>
+<!-- Locations -->
+<div>
+<h4 class="font-serif text-xl text-amber-500 mb-6">Our Locations</h4>
+<ul class="space-y-4">
+<li>
+<div class="text-stone-100 text-sm font-semibold">Flagship Atelier</div>
+<div class="text-stone-400 text-xs">242 Espresso Way, Seattle, WA</div>
+</li>
+<li>
+<div class="text-stone-100 text-sm font-semibold">The Lab</div>
+<div class="text-stone-400 text-xs">88 Roastery Lane, Brooklyn, NY</div>
+</li>
+</ul>
+</div>
+<!-- Newsletter Title -->
+<div>
+<h4 class="font-serif text-xl text-amber-500 mb-6">Contact</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-500 text-sm mt-1">mail</span>
+<span class="text-stone-400 text-sm">concierge@cafephile.coffee</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-500 text-sm mt-1">call</span>
+<span class="text-stone-400 text-sm">+1 (800) CAFE-PHILE</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-stone-800 py-8 px-12 text-center">
+<p class="text-stone-500 text-xs uppercase tracking-widest">© 2024 Cafephile. The Curated Alchemist.</p>
+</div>
+</footer>
+</body></html>
