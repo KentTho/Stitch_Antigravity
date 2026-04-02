@@ -11,220 +11,266 @@ Ngày cập nhật: 31/03/2026
 
 ## 1. TỔNG QUAN VÀ MỤC TIÊU
 
-Trong kỷ nguyên AI năm 2026, việc tạo ra một website không còn là đặc quyền của riêng lập trình viên. Bộ đôi công cụ miễn phí từ Google giúp rút ngắn quy trình từ 3–8 tuần xuống chỉ còn 5–10 phút, không yêu cầu bất kỳ kiến thức lập trình nào.
+Trong năm 2026, công nghệ AI đã giúp việc tạo website trở nên đơn giản như viết email. Bạn không cần biết lập trình — chỉ cần mô tả điều mình muốn bằng tiếng Việt, AI sẽ tự tạo ra trang web hoàn chỉnh. Bộ đôi công cụ miễn phí từ Google dưới đây giúp rút ngắn quy trình từ 3–8 tuần xuống chỉ còn 5–10 phút.
 
-### 1.1 Mục tiêu tài liệu
+### 1.1 Tài liệu này dành cho ai?
 
-- Giúp bất kỳ thành viên (kể cả non-IT) tự tạo landing page hoặc website hoàn chỉnh.
-- Tận dụng AI để rút ngắn thời gian thiết kế từ vài tuần xuống vài phút.
+- Ban Giám đốc muốn xem demo ý tưởng ngay trong buổi họp.
+- Nhân viên Marketing, Sales muốn tự tạo trang quảng cáo mà không cần chờ team kỹ thuật.
+- Bất kỳ ai trong công ty — dù chưa từng viết một dòng code nào.
 
 ### 1.2 Hai công cụ chính
 
-**Google Stitch — Vai trò "Kiến trúc sư"**
+**🎨 Google Stitch — "Người thiết kế"**
 
-Địa chỉ truy cập: [stitch.withgoogle.com](http://stitch.withgoogle.com)
+Địa chỉ: [stitch.withgoogle.com](http://stitch.withgoogle.com)
+
+Bạn nói hoặc dán ảnh mẫu vào → Stitch tự tạo ra giao diện website đẹp. Giống như thuê một nhà thiết kế, nhưng miễn phí và làm việc trong vài giây.
 
 - Nhận ảnh chụp màn hình hoặc mô tả bằng ngôn ngữ tự nhiên.
-- Tạo ra 2–3 biến thể giao diện đẹp, hiện đại, chuyên nghiệp.
-- Hỗ trợ thiết kế luồng công việc đa trang cùng lúc.
-- Cho phép chỉnh sửa trực tiếp bằng công cụ Annotate (chú thích).
-- Chuyên xử lý phần giao diện trực quan (front-end); **KHÔNG** bao gồm cơ sở dữ liệu hay chức năng hoạt động.
+- Tạo ra 2–3 phiên bản giao diện đẹp, hiện đại để bạn chọn.
+- Cho phép sửa từng vùng cụ thể bằng cách khoanh vùng và nhập yêu cầu.
+- **Lưu ý:** Stitch chỉ làm phần "hình ảnh" của website, chưa tạo ra trang web chạy thật sự.
 
-**Google Antigravity — Vai trò "Người thợ xây"**
+**🔧 Google Antigravity — "Người xây dựng"**
 
-- Tiếp nhận bản thiết kế từ Stitch, tự động chuyển thành mã code hoạt động được.
-- Thêm cơ sở dữ liệu, tính năng động.
-- Chạy thử ngay trên máy tính (local) và triển khai (deploy) ứng dụng thực tế.
-- Tích hợp sẵn Nano Banana 2 và Gemini Flash để tạo hình ảnh chất lượng cao.
+Antigravity là phần mềm cài trên máy tính. Nó nhận bản thiết kế từ Stitch và tự động tạo ra website hoạt động thật sự — bao gồm cả cơ sở dữ liệu, nút bấm, form điền thông tin, v.v.
 
-### 1.3 Sơ đồ quy trình tổng thể
+- Tự động chuyển bản thiết kế thành website chạy được.
+- Có thể xem kết quả ngay trên máy tính trước khi đưa lên mạng.
+- Tích hợp sẵn AI tạo hình ảnh chất lượng cao (Nano Banana 2 + Gemini Flash).
 
-> **Ý tưởng → Stitch (tạo 2–3 biến thể UI) → Xuất file ZIP / Dùng Skill → Antigravity (viết code + chạy) → Website thật | Chỉ mất 5–10 phút**
+### 1.3 Quy trình tổng thể (5–10 phút)
+
+> **Ý tưởng → Stitch tạo 2–3 giao diện → Chọn 1 giao diện ưng ý → Antigravity tự tạo website → Xong!**
 
 ---
 
 ## 2. LỢI ÍCH SO VỚI CÁCH LÀM TRUYỀN THỐNG
 
-| Tiêu chí               | Cách làm cũ                   | Stitch + Antigravity      |
-| ---------------------- | ----------------------------- | ------------------------- |
-| Thời gian hoàn thành   | 3–8 tuần                      | 5–10 phút                 |
-| Nhân sự cần thiết      | Designer + Developer          | 1 người (không cần code)  |
-| Chi phí                | Cao (thuê ngoài hoặc nhân sự) | 0 đồng (công cụ miễn phí) |
-| Tính linh hoạt khi sửa | Khó sửa, tốn nhiều thời gian  | Sửa ngay bằng lệnh chat   |
-| Thử nghiệm ý tưởng     | Phải chờ bản prototype        | Demo ngay trong buổi họp  |
+| Tiêu chí             | Cách làm cũ                              | Stitch + Antigravity              |
+| -------------------- | ---------------------------------------- | --------------------------------- |
+| Thời gian hoàn thành | 3–8 tuần                                 | 5–10 phút                         |
+| Nhân sự cần thiết    | Cần cả nhà thiết kế + lập trình viên     | 1 người, không cần biết code      |
+| Chi phí              | Cao (thuê ngoài hoặc nhân sự chuyên môn) | 0 đồng — hoàn toàn miễn phí       |
+| Chỉnh sửa khi cần    | Phải gửi yêu cầu, chờ nhiều ngày         | Sửa ngay bằng câu lệnh tiếng Việt |
+| Thử nghiệm ý tưởng   | Phải chờ bản thiết kế mẫu                | Demo ngay trong buổi họp          |
 
 ---
 
 ## 3. HƯỚNG DẪN THỰC HÀNH TỪNG BƯỚC
 
-### Bước 1: Cài đặt Stitch Skill vào Antigravity (Kết nối MCP Server)
+### Bước 1: Kết nối Stitch và Antigravity (Làm 1 lần duy nhất)
 
-Đây là bước thiết lập một lần duy nhất, giúp hai công cụ "nói chuyện" được với nhau qua đường dây MCP Server.
-
-1. Mở phần mềm Antigravity trên máy tính, tạo một thư mục dự án mới.
-2. Lấy link mã nguồn kỹ năng (GitHub: [google-labs-code/stitch-skills · GitHub](https://github.com/google-labs-code/stitch-skills)) của Stitch Skill do Google cung cấp (xem tài liệu nội bộ hoặc liên hệ team Dev).
-3. Dán link vào khung chat của Antigravity, sau đó dùng một trong hai lệnh:
-   - `Install this skill - https://github.com/google-labs-code/stitch-skills` → **Cài cục bộ, chỉ áp dụng cho dự án đang mở hiện tại.**
-   - `Install the skill globally - https://github.com/google-labs-code/stitch-skills` → **Cài toàn cục, áp dụng cho tất cả dự án hiện tại và tương lai.**
-4. Đợi hệ thống tự động sao chép (clone) kho lưu trữ và cài đặt kỹ năng vào thư mục làm việc.
+Trước khi bắt đầu, bạn cần "giới thiệu" để Stitch và Antigravity nhận ra nhau. Có 2 cách, bạn chọn 1 cách phù hợp nhất:
 
 ---
 
-**💡 Cách thay thế: Kết nối trực tiếp MCP Server (không cần lệnh install)**
+**Cách A: Kết nối qua cài đặt trong Antigravity (Khuyến nghị — đơn giản hơn)**
 
-Thay vì gõ lệnh `Install this skill`, bạn có thể kết nối Stitch trực tiếp vào MCP Server của Antigravity theo các bước sau. Đây là phương pháp nâng cao giúp Antigravity luôn sẵn sàng gọi Stitch mà không cần cài thủ công từng dự án:
+Đây là cách trực quan nhất, chỉ cần vài cú nhấp chuột:
 
-- Mở Antigravity → Chọn vào **(3 chấm)** ở góc trên bên phải → chọn tab **MCP Servers** → gõ "Stitch" → Chọn tải về.
-- Nhấp vào **Stitch** → chọn **Configure** → Nhập API Key.
-- Lấy API Key ở Stitch: Click vào Trang cá nhân góc trên bên phải → chọn **Cài đặt Stitch** → Cuộn xuống sẽ thấy tạo khóa → Nhấn **Tạo khóa** → Copy API và Paste lại Antigravity.
-- Kiểm tra kết nối: gõ vào Antigravity `List available Stitch tools` — nếu Antigravity liệt kê được các công cụ của Stitch là kết nối thành công.
+1. Mở Antigravity → Nhấp vào biểu tượng **3 chấm (⋯)** ở góc trên bên phải màn hình.
 
-> ⚠️ **Bảo mật:** Luôn kiểm tra kỹ file `.md` (skill MD file) trước khi cài đặt bất kỳ kỹ năng nào từ mạng vào Antigravity để đảm bảo tính an toàn.
+2. Chọn tab **MCP Servers** (đây là nơi quản lý các công cụ kết nối) → Gõ "Stitch" vào ô tìm kiếm → Nhấn tải về.
 
----
+3. Nhấp vào **Stitch** → Chọn **Configure** → Nhập **API Key** (mã xác nhận kết nối).
 
-### Bước 2: Thiết kế giao diện với Google Stitch
+**👉 API Key là gì?** Đây là mã xác minh giúp Antigravity biết bạn có quyền dùng Stitch. Lấy mã này như sau:
 
-Truy cập [stitch.withgoogle.com](http://stitch.withgoogle.com) để bắt đầu. Có 2 cách tạo thiết kế:
+- Mở Stitch → Nhấp vào ảnh đại diện của bạn ở góc trên bên phải → Chọn **Cài đặt Stitch**.
+- Cuộn xuống phần **Tạo khóa** → Nhấn **Tạo khóa** → Copy mã vừa tạo → Dán lại vào Antigravity.
 
-**Cách 1: Từ ảnh chụp màn hình (phổ biến nhất)**
+4. Kiểm tra kết nối: Gõ câu sau vào Antigravity và nhấn Enter:
 
-1. Chụp ảnh màn hình trang web bạn muốn lấy cảm hứng.
-2. Dán ảnh vào giao diện Stitch.
-3. Nhập câu lệnh mô tả mong muốn. Ví dụ prompt mẫu:
-   - _"Hãy làm cho thiết kế này đẹp hơn, hiện đại hơn, cảm giác công nghệ sạch, màu xanh tre làm điểm nhấn."_
-   - _"Make this more beautiful, interesting, and dopamine-inducing."_
-4. Stitch trả về 2–3 biến thể giao diện. Chọn biến thể ưng ý để tiếp tục.
+> 💬 **Lệnh kiểm tra kết nối**
+>
+> ```
+> List available Stitch tools
+> ```
 
-**Cách 2: Từ mô tả bằng chữ (không cần ảnh)**
-
-Nhập trực tiếp mô tả vào Stitch. Ví dụ:
-
-- _"Tạo landing page cho dịch vụ AI Assistant, phong cách hiện đại, có form đăng ký dùng thử, màu xanh trắng."_
-- [Prompt mẫu — Landing Page](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.jfiyq9e0q71z)
-- [Prompt mẫu — Full Website](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.wbmwv7njrlvg)
-
-**Tính năng Annotate — Chỉnh sửa chi tiết trực tiếp**
-
-- Nhấp vào biểu tượng bút chì (Annotate) trên giao diện Stitch.
-- Khoanh vùng muốn sửa (nút, màu nền, khoảng cách...), nhập yêu cầu. Ví dụ:
-  - _"Đổi màu nút này thành xanh lá, thêm hiệu ứng hover."_
-  - _"Modify this section better"_ / _"Change the colors."_
-- Nhấn **Apply** — AI chỉnh riêng vùng đó mà không ảnh hưởng đến phần còn lại.
-
-**Kiểm tra giao diện di động (Mobile Preview)**
-
-- Nhấp vào trình đơn thả xuống trên phần xem trước của Stitch.
-- Chọn **Show QR code**.
-- Dùng điện thoại quét mã để trải nghiệm giao diện mobile ngay lập tức.
+Nếu Antigravity liệt kê ra danh sách công cụ của Stitch → **Kết nối thành công!**
 
 ---
 
-### Bước 3: Chuyển thiết kế thành code web (2 phương pháp)
+**Cách B: Kết nối bằng lệnh cài đặt nhanh**
 
-**Phương pháp 1: Thủ công qua file ZIP**
+Thay vì vào cài đặt, bạn có thể gõ lệnh trực tiếp vào khung chat của Antigravity:
 
-1. Trên Stitch, chọn biến thể ưng ý → **Export** → **Download as ZIP**.
-2. Mở Antigravity, tạo thư mục mới (ví dụ: "test site"), kéo file ZIP vào.
-3. Gõ lệnh trong Antigravity: _"Hãy biến cái này thành một trang web đẹp, chạy được."_
-4. Antigravity tự động giải nén, viết code và hiển thị kết quả.
+- Dán đường dẫn sau vào khung chat: `https://github.com/google-labs-code/stitch-skills`
+- Thêm dòng lệnh phía sau, chọn 1 trong 2:
+  - `install this skill` → Chỉ dùng cho dự án đang mở.
+  - `install the skill globally` → Dùng được cho tất cả dự án sau này _(khuyến nghị)_.
 
-**Phương pháp 2: Tự động hóa (Dùng Skill đã cài)**
-
-1. Copy nội dung mã lệnh HTML/CSS (Xem Mã).
-2. Tạo file HTML tại Antigravity (Cách tạo: `[Tên_file.html]`).
-3. Dán đoạn mã lệnh vào file vừa tạo.
-4. Ra lệnh tại khung chat Agent: _"Hãy thiết kế landing page từ nội dung này, dùng Stitch skill để tạo UI."_
-5. Antigravity chạy song song: một bên tự gọi Stitch tạo file CSS, bên còn lại viết code toàn bộ trang.
+> ⚠️ **Lưu ý bảo mật:** Chỉ cài đặt từ các đường dẫn do Google hoặc BBo Tech cung cấp. Không cài từ nguồn lạ.
 
 ---
 
-**📌 Prompt khi sử dụng Antigravity lấy thiết kế từ Stitch**
+### Bước 2: Tạo giao diện website trên Stitch
 
-Khi muốn Antigravity tự động lấy tất cả các project trong Stitch:
+Truy cập [stitch.withgoogle.com](http://stitch.withgoogle.com). Bạn có 2 cách để bắt đầu:
 
-```
-List my Stitch projects
-```
+**Cách 1: Dùng ảnh mẫu (Dễ nhất — khuyến nghị)**
 
-**📌 Prompt nên bổ sung khi sử dụng Antigravity lấy thiết kế từ một màn hình cụ thể:**
+1. Tìm một trang web bạn thấy đẹp → Nhấn phím **Print Screen** (hoặc **Windows + Shift + S**) để chụp màn hình.
+2. Dán ảnh vào Stitch (**Ctrl + V**).
+3. Nhập yêu cầu của bạn bằng tiếng Việt. Ví dụ:
 
-Khi muốn Antigravity tự động lấy thiết kế từ một màn hình cụ thể trong Stitch, hãy dùng cấu trúc prompt sau:
+> 💬 **Mẫu câu lệnh tiếng Việt**
+>
+> ```
+> Hãy làm cho thiết kế này đẹp hơn, hiện đại hơn, cảm giác công nghệ sạch, dùng màu xanh lá làm điểm nhấn.
+> ```
 
-```
-Sử dụng Stitch, hãy tìm trong project [Tên dự án hoặc ID dự án].
-Lấy mã nguồn (HTML/Thiết kế) của màn hình có tên là [Tên biến thể/Tên Screen].
-Trích xuất đầy đủ màu sắc, font chữ, bố cục và tạo trong thư mục dự án.
-```
+> 💬 **Mẫu câu lệnh tiếng Anh**
+>
+> ```
+> Make this more beautiful, interesting, and dopamine-inducing.
+> ```
 
-Ví dụ cụ thể: _Sử dụng Stitch, hãy tìm trong project BBo-LandingPage-2026. Lấy mã nguồn của màn hình có tên là Hero_Variant_2. Sau đó lưu vào file /src/components/Hero.html._
+4. Stitch tự tạo 2–3 phiên bản giao diện khác nhau để bạn chọn. Chọn phiên bản ưng ý nhất.
 
-> 💡 **Lưu ý về hình ảnh:** Antigravity tích hợp sẵn Nano Banana 2 + Gemini Flash giúp tự động tạo ảnh chất lượng cao chèn trực tiếp vào trang. Gõ lệnh: _"Tạo ảnh sản phẩm với phong cách tối giản, màu xanh trắng."_
+**Cách 2: Mô tả bằng chữ (Không cần ảnh)**
+
+Nếu bạn chưa có ảnh mẫu, cứ mô tả thẳng điều bạn muốn:
+
+> 💬 **Ví dụ câu lệnh mô tả**
+>
+> ```
+> Tạo landing page cho dịch vụ AI Assistant, phong cách hiện đại, có ô điền thông tin đăng ký dùng thử, dùng tông màu xanh trắng.
+> ```
+
+Xem thêm mẫu câu lệnh tại: [Landing Page mẫu](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing) | [Full Website mẫu](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)
+
+**Tính năng Chỉnh sửa trực tiếp (Annotate)**
+
+Nếu muốn thay đổi một vùng cụ thể trên giao diện mà không muốn làm lại từ đầu:
+
+- Nhấp vào biểu tượng bút chì **(Annotate)** → Khoanh vùng muốn sửa.
+- Nhập yêu cầu. Ví dụ: _"Đổi màu nút này thành xanh lá, thêm hiệu ứng khi di chuột qua."_
+- Nhấn **Apply (Áp dụng)** → AI chỉ sửa vùng đó, không đụng đến phần còn lại.
+
+**Xem giao diện trên điện thoại**
+
+- Nhấp vào nút menu thả xuống trong phần xem trước → Chọn **Show QR code**.
+- Dùng điện thoại quét mã → Thấy ngay giao diện mobile trông như thế nào.
 
 ---
 
-### Bước 4: Tinh chỉnh và kiểm tra
+### Bước 3: Chuyển giao diện thành website thật (2 cách)
 
-Sau khi có bản web hoàn thiện, kiểm tra và tinh chỉnh theo hai hướng:
+**Cách 1: Tải file về và dùng Antigravity xây dựng (Đơn giản nhất)**
 
-**Chỉnh sửa qua Stitch (Annotate)**
+1. Trên Stitch, chọn giao diện ưng ý → Nhấn **Export (Xuất)** → **Download as ZIP** (Tải về dạng file nén).
+2. Mở Antigravity → Tạo thư mục mới (đặt tên tùy thích) → Kéo file ZIP vừa tải vào.
+3. Gõ yêu cầu vào Antigravity:
 
-- Khoanh vùng cần sửa → nhập yêu cầu → **Apply**.
-- Ví dụ: _"Đổi màu nút sang neon"_, _"Thay chữ thành Brand Strategy"_, _"Thêm hiệu ứng hover"_ → Chọn **Change with AI**, lúc này AI sẽ thiết kế lại phần đã khoanh vùng.
+> 💬 **Câu lệnh để Antigravity tạo website**
+>
+> ```
+> Hãy biến bản thiết kế này thành một trang web đẹp, hoạt động được.
+> ```
 
-**Chỉnh sửa qua Antigravity (lệnh chat)**
+4. Antigravity tự giải nén, tự viết code và hiển thị kết quả. Bạn không cần làm gì thêm.
 
-- Dùng chat để ra lệnh trực tiếp. Ví dụ:
+**Cách 2: Để Antigravity tự lấy thiết kế từ Stitch (Tự động hóa hoàn toàn)**
+
+Với cách này, Antigravity sẽ tự vào Stitch lấy thiết kế mà không cần bạn tải file về tay.
+
+1. Mở Antigravity → Gõ câu lệnh để xem danh sách dự án Stitch của bạn:
+
+> 💬 **Xem danh sách dự án**
+>
+> ```
+> List my Stitch projects
+> ```
+
+2. Ghi lại tên dự án và tên màn hình bạn muốn lấy, rồi dùng câu lệnh sau:
+
+> 💬 **Câu lệnh lấy thiết kế từ Stitch**
+>
+> ```
+> Sử dụng Stitch, hãy tìm trong project [Tên dự án]. Lấy thiết kế của màn hình có tên [Tên màn hình]. Trích xuất đầy đủ màu sắc, font chữ, bố cục và tạo website trong thư mục dự án.
+> ```
+
+**Ví dụ cụ thể:** _Sử dụng Stitch, hãy tìm trong project BBo-LandingPage-2026. Lấy thiết kế của màn hình có tên Hero_Variant_2. Sau đó lưu vào file /src/components/Hero.html._
+
+> 💡 **Mẹo:** Câu lệnh càng mô tả chi tiết thì AI càng tạo ra kết quả chính xác hơn. Hãy nêu rõ tên dự án, tên màn hình và bạn muốn lưu ở đâu.
+
+> 🖼️ **Tạo hình ảnh tự động:** Antigravity có thể tự tạo ảnh minh họa chèn vào trang web. Chỉ cần gõ: _"Tạo ảnh sản phẩm với phong cách tối giản, màu xanh trắng."_
+
+---
+
+### Bước 4: Chỉnh sửa và kiểm tra lần cuối
+
+Khi đã có website hoàn chỉnh, bạn có thể tinh chỉnh theo 2 cách:
+
+**Chỉnh sửa trực quan trên Stitch**
+
+- Khoanh vùng muốn sửa → Nhập yêu cầu → Chọn **Change with AI**.
+- **Ví dụ:** _"Đổi màu nút sang neon"_, _"Thay chữ thành Brand Strategy"_, _"Thêm hiệu ứng khi di chuột qua"_.
+
+**Chỉnh sửa bằng câu lệnh trong Antigravity**
+
+- Gõ yêu cầu trực tiếp vào Antigravity, Antigravity cập nhật ngay:
   - _"Đổi tiêu đề thành: AI cho mọi doanh nghiệp"_
-  - _"Thêm icon vào mỗi mục tính năng"_
-- Antigravity cập nhật code và hiển thị kết quả ngay lập tức.
-- **Điểm lưu ý:** Khi muốn chỉnh phần nào ở giao diện, cần mô tả chi tiết đoạn nào trong trang và kêu Antigravity thiết kế đoạn đó. Càng chi tiết phần prompt thì AI sẽ thiết kế chính xác hơn.
+  - _"Thêm biểu tượng vào mỗi mục tính năng"_
+
+> 💡 **Mẹo chỉnh sửa hiệu quả:** Mô tả thật cụ thể vị trí muốn sửa. Ví dụ thay vì nói _"Sửa nút"_ thì nói _"Sửa nút màu xanh ở cuối trang, đổi thành màu cam"_. Càng chi tiết, AI càng làm đúng ý bạn hơn.
 
 ---
 
-## 4. ỨNG DỤNG THỰC TẾ
+## 4. ỨNG DỤNG THỰC TẾ & LỢI ÍCH TỪNG BỘ PHẬN
 
-### Các loại trang web có thể tạo nhanh
+| Bộ phận           | Có thể làm gì ngay?                                         | Lợi ích                             |
+| ----------------- | ----------------------------------------------------------- | ----------------------------------- |
+| Ban Giám đốc      | Demo ý tưởng trực quan ngay trong buổi họp                  | Không cần chờ, quyết định nhanh hơn |
+| Marketing / Sales | Tự tạo trang quảng cáo, trang thu thập thông tin khách hàng | Không phụ thuộc team kỹ thuật       |
+| Team Developer    | Nhận ngay bộ khung website sẵn để phát triển thêm           | Tiết kiệm ~70% thời gian ban đầu    |
+| Nhân viên bất kỳ  | Tạo website thử nghiệm ý tưởng, dự án cá nhân               | Không cần học lập trình             |
 
-- Landing page thu thập thông tin khách hàng (Lead Magnet Page)
-- Cổng thông tin hướng dẫn khách hàng mới (Client Onboarding Portal)
-- Trang tổng quan cho thành viên (Member Dashboard)
-- Công cụ trực quan hóa luồng công việc
-- Trang demo sản phẩm nội bộ, thử nghiệm ý tưởng trước khi đầu tư
+**Các loại trang web có thể tạo nhanh**
+
+- Trang quảng cáo, thu thập thông tin khách hàng tiềm năng
+- Trang hướng dẫn và chào đón khách hàng mới
+- Trang tổng quan nội bộ cho thành viên nhóm
+- Trang sơ đồ quy trình công việc trực quan
+- Bản demo ý tưởng để trình bày trong cuộc họp
 
 ---
 
 ## 5. CÔNG THỨC GHI NHỚ NHANH
 
-> **Ý tưởng → Stitch (3 biến thể) → Chọn 1 → Xuất ZIP → Antigravity (code + chạy) = 5–10 phút**
+> **Ý tưởng → Stitch (2–3 giao diện) → Chọn 1 → Antigravity tự tạo website = 5–10 phút**
 
-Với tư duy _"Ngôn ngữ là công cụ — quan trọng là làm chủ luồng kiến trúc"_, bộ đôi Stitch + Antigravity chính là đòn bẩy để tăng tốc mọi dự án thiết kế web tại BBo Tech.
+Với tư duy _"Ngôn ngữ chính là công cụ"_, bộ đôi Stitch + Antigravity giúp bất kỳ ai tại BBo Tech cũng có thể tạo ra sản phẩm web chuyên nghiệp mà không cần chờ đợi.
 
 ---
 
 ## 6. CHECKLIST HOÀN THÀNH
 
-- [ ] Đã cài đặt Stitch Skill vào Antigravity (**MCP Server**).
-- [ ] Đã chọn được mẫu website hoặc mô tả ý tưởng rõ ràng.
-- [ ] Đã có thiết kế ưng ý từ Stitch (chọn 1 trong 2–3 biến thể).
-- [ ] Antigravity đã nhận diện được kỹ năng Stitch qua MCP.
-- [ ] Website đã chạy ổn định trên máy tính (local).
-- [ ] Giao diện hiển thị tốt trên thiết bị di động (kiểm tra QR code).
+- [ ] Đã kết nối Stitch và Antigravity (qua MCP Server hoặc lệnh cài đặt).
+- [ ] Đã có ý tưởng hoặc ảnh mẫu để bắt đầu thiết kế.
+- [ ] Đã chọn được 1 giao diện ưng ý từ Stitch (trong 2–3 phiên bản).
+- [ ] Antigravity đã nhận ra kết nối với Stitch (kiểm tra bằng lệnh `List available Stitch tools`).
+- [ ] Website đã hiển thị và chạy được trên máy tính.
+- [ ] Giao diện trông ổn trên điện thoại (kiểm tra bằng QR code trong Stitch).
 
 ---
 
 ## 7. TÀI NGUYÊN VÀ LIÊN KẾT THAM KHẢO
 
-| Tài nguyên               | Mô tả                            | Link / Ghi chú                                                                                                                                                                                                                                    |
-| ------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Google Stitch            | Công cụ thiết kế giao diện AI    | [stitch.withgoogle.com](http://stitch.withgoogle.com)                                                                                                                                                                                             |
-| Video hướng dẫn chi tiết | Ghi hình thực hành step-by-step  | [Link video nội bộ]                                                                                                                                                                                                                               |
-| Slide giới thiệu         | Slide trình bày tổng quan        | [Stitch + Antigravity Overview](https://canva.link/1i8eungsswz9ywy)                                                                                                                                                                               |
-| Prompt mẫu               | Tập hợp câu lệnh hay dùng nhất   | [Landing Page](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.jfiyq9e0q71z) · [Full Website](https://docs.google.com/document/d/1q22CyIQR_9IfZjV4skQRSjNAWgb0GEQ_R9osFNhgOiQ/edit?tab=t.wbmwv7njrlvg) |
-| Stitch Skill (GitHub)    | File kỹ năng cài vào Antigravity | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)                                                                                                                                                               |
-| Google Drive    | Tổng hợp tài liệu + Video | [google-drive-bbo-tech](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                                                                                                                                               |
-| Documents    | Tài liệu đọc | [documents-Stitch-Antigravity](https://docs.google.com/document/d/1h0s_9ip79DWxWq8VgCq2zRJTmr0tOQR4/edit?usp=sharing&ouid=101529481334145985368&rtpof=true&sd=true)                                                                                                                                                               |
+| Tài nguyên                | Mô tả                            | Truy cập                                                                                                                                                            |
+| ------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Google Stitch             | Công cụ thiết kế giao diện AI    | [stitch.withgoogle.com](http://stitch.withgoogle.com)                                                                                                               |
+| Video hướng dẫn chi tiết  | Ghi hình thực hành từng bước     | [Link video nội bộ]                                                                                                                                                 |
+| Slide giới thiệu          | Slide tổng quan để trình bày     | [canva.link/1i8eungsswz9ywy](https://canva.link/1i8eungsswz9ywy)                                                                                                    |
+| Prompt mẫu — Landing Page | Câu lệnh mẫu tạo trang quảng cáo | [Xem tài liệu prompt](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                             |
+| Prompt mẫu — Full Website | Câu lệnh mẫu tạo website đầy đủ  | [Xem tài liệu prompt](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                             |
+| Stitch Skill (GitHub)     | Gói kết nối cài vào Antigravity  | [github.com/google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)                                                                      |
+| Google Drive              | Tổng hợp tài liệu + Video        | [google-drive-bbo-tech](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                           |
+| Documents                 | Tài liệu đọc                     | [documents-Stitch-Antigravity](https://docs.google.com/document/d/1h0s_9ip79DWxWq8VgCq2zRJTmr0tOQR4/edit?usp=sharing&ouid=101529481334145985368&rtpof=true&sd=true) |
 
 ---
 
-_Tài liệu này được biên soạn để lưu hành nội bộ tại BBo Tech_
+_Tài liệu lưu hành nội bộ tại BBo Tech — Mọi thắc mắc liên hệ team Developer._
