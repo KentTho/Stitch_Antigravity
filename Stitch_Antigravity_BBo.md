@@ -268,7 +268,7 @@ Với tư duy _"Ngôn ngữ chính là công cụ"_, bộ đôi Stitch + Antigra
 | Prompt mẫu — Landing Page | Câu lệnh mẫu tạo trang quảng cáo | [Xem tài liệu prompt](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                             |
 | Prompt mẫu — Full Website | Câu lệnh mẫu tạo website đầy đủ  | [Xem tài liệu prompt](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                             |
 | Stitch Skill (GitHub)     | Gói kết nối cài vào Antigravity  | [github.com/google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)                                                                      |
-| Google Drive              | Tổng hợp tài liệu + Video        | [google-drive-bbo-tech](https://docs.google.com/document/d/1DgAwx36R2IvdfDNmfNCCPgm8dMZUo6Vcy5pffm1HrDA/edit?usp=sharing)                                           |
+| Google Drive              | Tổng hợp tài liệu + Video        | [google-drive-bbo-tech](https://drive.google.com/drive/folders/1T8V1f0D53yDe9ZsX74YqAOO47FqfSDJt?usp=sharing)                                           |
 | Documents                 | Tài liệu đọc                     | [documents-Stitch-Antigravity](https://docs.google.com/document/d/1h0s_9ip79DWxWq8VgCq2zRJTmr0tOQR4/edit?usp=sharing&ouid=101529481334145985368&rtpof=true&sd=true) |
 
 ---
